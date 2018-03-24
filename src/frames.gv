@@ -1,0 +1,12 @@
+digraph G {
+"drone_tf/odom" -> "drone_tf/ardrone_base_link"[label="Broadcaster: /drone/ardrone_driver\nAverage rate: 199.020 Hz\nMost recent transform: 1521630317.324 ( 0.004 sec old)\nBuffer length: 4.949 sec\n"];
+"cam_front" -> "drone_tf/odom"[label="Broadcaster: /static_transform_publisher_1521629245955384262\nAverage rate: 10.193 Hz\nMost recent transform: 1521630317.381 ( -0.052 sec old)\nBuffer length: 4.905 sec\n"];
+"map" -> "cam_front"[label="Broadcaster: /drone/drone_stateestimation\nAverage rate: 30.636 Hz\nMost recent transform: 1521630317.311 ( 0.018 sec old)\nBuffer length: 4.929 sec\n"];
+"drone_tf/ardrone_base_link" -> "drone_tf/ardrone_base_frontcam"[label="Broadcaster: /drone/ardrone_driver\nAverage rate: 6.207 Hz\nMost recent transform: 1521630317.244 ( 0.084 sec old)\nBuffer length: 4.833 sec\n"];
+"drone_tf/ardrone_base_link" -> "drone_tf/ardrone_base_bottomcam"[label="Broadcaster: /drone/ardrone_driver\nAverage rate: 6.207 Hz\nMost recent transform: 1521630317.244 ( 0.084 sec old)\nBuffer length: 4.833 sec\n"];
+"drone_tf/ardrone_base_link" -> "drone_ground_truth"[label="Broadcaster: /broadcaster_frame\nAverage rate: 10.208 Hz\nMost recent transform: 1521630317.256 ( 0.073 sec old)\nBuffer length: 4.800 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1521630317.329"[ shape=plaintext ] ;
+ }->"map";
+}

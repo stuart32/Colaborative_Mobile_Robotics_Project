@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+ <launch>
+    <node pkg="colab" type="b_point"
+          name="broadcaster_frame" />
+  </launch>
